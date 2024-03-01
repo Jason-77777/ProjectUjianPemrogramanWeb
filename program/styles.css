@@ -15,7 +15,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    margin-right: 10px; /* Add margin between navbar items */
+    margin-right: 10px; 
 }
 
 .search-container {
@@ -50,7 +50,6 @@ body {
 .float-right {
     float: right;
     color: rgb(0, 0, 0);
-    padding: 14px 16px;
 }
 
 /* Style for the search box */
@@ -82,7 +81,6 @@ body {
     color: white;
 }
 
-/* Add style for hover and active states */
 .navbar a:hover {
     background-color: #ddd;
     color: black;
