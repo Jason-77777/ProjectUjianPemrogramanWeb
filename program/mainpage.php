@@ -12,6 +12,7 @@
         <a href="#">Inventory</a>
         <a href="#">Notification</a>
         <a href="#">Payment</a>
+        <a href="#">Profile</a>
         <div class="search-container">
             <div class="search-wrapper">
                 <input type="text" id="searchInput" placeholder="Search Anything">
@@ -19,7 +20,7 @@
             </div>
         </div>
         <span class="float-right">BOMBA</span>
-        <a href="#" class="float-right">Profile</a>
+        <span a href="#" class="float-right">Profile</a>
     </div>
 
     <!-- <div class="search-box" id="searchBox">
