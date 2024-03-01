@@ -12,7 +12,6 @@
         <a href="#">Inventory</a>
         <a href="#">Notification</a>
         <a href="#">Payment</a>
-        <a href="#">Profile</a>
         <div class="search-container">
             <div class="search-wrapper">
                 <input type="text" id="searchInput" placeholder="Search Anything">
@@ -22,11 +21,6 @@
         <span class="float-right">BOMBA</span>
         <span a href="#" class="float-right">Profile</a>
     </div>
-
-    <!-- <div class="search-box" id="searchBox">
-        <input type="text" id="searchInputMobile" placeholder="Search...">
-        <button id="searchButtonMobile" onclick="toggleSearchBox()">Search</button>
-    </div> -->
 
     <script>
         function toggleSearchBox() {
