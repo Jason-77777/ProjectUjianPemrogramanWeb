@@ -7,26 +7,12 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="#">Items</a>
-        <a href="#">Inventory</a>
-        <a href="#">Notification</a>
-        <a href="#">Payment</a>
-        <div class="search-container">
-            <div class="search-wrapper">
-                <input type="text" id="searchInput" placeholder="Search Anything">
-                <button id="searchButton" onclick="toggleSearchBox()">Search</button>
-            </div>
-        </div>
-        <div class="float-right">BOMBA</div>
-        <a href="">Profile</a>
-    </div>
+    <!-- Include the navbar -->
+    <?php include 'navbar.html'; ?>
 
-    <script>
-        function toggleSearchBox() {
-            var searchBox = document.getElementById('searchBox');
-            searchBox.style.display = (searchBox.style.display === 'none' || searchBox.style.display === '') ? 'block' : 'none';
-        }
-    </script>
+    <!-- Your page content goes here -->
+    <h1>Welcome to My Page</h1>
+    <p>HI GEAS.</p>
+
 </body>
 </html>

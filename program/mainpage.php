@@ -10,7 +10,7 @@
 
 <div class="login-box">
   <h2>Welcome to Parpel!</h2>
-  <form action="index.php" method="post">
+  <form action="" method="post">
     <input type="text" name="username" placeholder="Username" required>
     <input type="text" name="email" placeholder="Email" required>
     <input type="password" name="password" placeholder="Password" required>
@@ -30,11 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = new mysqli('localhost', 'root', '', 'parpel');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
+        echo "GA JALAN";
     }
     else{
         $stmt = $conn->prepare("INSERT INTO users(username, email, password) VALUES(?, ?, ?)");
         $stmt->bind_param("sss", $username, $email, $password);
         $stmt->execute();
+        echo "UDA JALAN";
         $stmt->close();
         $conn->close();
     }
