@@ -22,51 +22,25 @@
 </div>
 
 <?php
-// Establish connection to MySQL database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "parpel";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-// Process form submission for registration
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $username = $_POST['username'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-  // Hash the password before storing for security
-  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-  // Prepare and bind SQL statement to insert user data
-  $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-  $stmt->bind_param("sss", $username, $email, $hashed_password);
-
-  // Check if query execution successful
-  if ($stmt->execute()) {
-    $affected_rows = $stmt->affected_rows;
-    if ($affected_rows > 0) {
-      echo "Registration successful!";
-    } else {
-      echo "Registration failed: No rows affected. (Check table structure/data types)";
+    $conn = new mysqli('localhost', 'root', '', 'parpel');
+    if($conn->connect_error){
+        die('Connection Failed : '.$conn->connect_error);
     }
-  } else {
-    echo "Error: Registration failed. " . $stmt->error;
-  }
-
-  // Close the statement
-  $stmt->close();
+    else{
+        $stmt = $conn->prepare("INSERT INTO users(username, email, password) VALUES(?, ?, ?)");
+        $stmt->bind_param("sss", $username, $email, $password);
+        $stmt->execute();
+        $stmt->close();
+        $conn->close();
+    }
 }
-
-// Close the connection
-$conn->close();
 ?>
+
 
 
 </body>
