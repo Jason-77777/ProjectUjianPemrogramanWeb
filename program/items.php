@@ -14,11 +14,11 @@
     <div class="image-catalog">
         <div class="image-box">
             <img src="image1.jpg">
-            <p>Description for Image 1</p>
+            <p>hai</p>
         </div>
         <div class="image-box">
             <img src="image2.jpg">
-            <p>Description for Image 2</p>
+            <p>hai</p>
         </div>
         <!-- Add more image boxes as needed -->
     </div>
