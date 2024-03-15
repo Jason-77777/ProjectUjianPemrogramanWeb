@@ -90,3 +90,27 @@ body {
     background-color: #4CAF50;
     color: white;
 }
+
+/* Style for the image catalog */
+.image-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-box {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Blue background */
+    text-align: center;
+    color: white; /* Text color */
+}
+
+.image-box img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px;
+    margin-bottom: 10px;
+}
+
