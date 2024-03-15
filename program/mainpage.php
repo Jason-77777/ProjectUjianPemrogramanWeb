@@ -30,18 +30,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = new mysqli('localhost', 'root', '', 'parpel');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
-        echo "GA JALAN";
     }
     else{
         $stmt = $conn->prepare("INSERT INTO users(username, email, password) VALUES(?, ?, ?)");
         $stmt->bind_param("sss", $username, $email, $password);
         $stmt->execute();
-        echo "UDA JALAN";
         $stmt->close();
         $conn->close();
+        
+        // Redirect to index.php after successful registration
+        header("Location: index.php");
+        exit();
     }
 }
 ?>
+
 
 
 

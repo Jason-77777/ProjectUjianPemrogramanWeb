@@ -13,11 +13,11 @@
     <!-- Image catalog content -->
     <div class="image-catalog">
         <div class="image-box">
-            <img src="image1.jpg">
+            <img src="image1.jpg" width="200px">
             <p>hai</p>
         </div>
         <div class="image-box">
-            <img src="image2.jpg">
+            <img src="image2.jpg" width="200px">
             <p>hai</p>
         </div>
         <!-- Add more image boxes as needed -->
