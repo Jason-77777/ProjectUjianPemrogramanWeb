@@ -11,8 +11,7 @@
     <?php include 'navbar.html'; ?>
 
     <!-- Your page content goes here -->
-    <h1>Welcome to My Page</h1>
-    <p>HI GEAS.</p>
+    
 
 </body>
 </html>
