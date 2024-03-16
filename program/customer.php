@@ -62,7 +62,7 @@
                 }
                 echo "Selected records deleted successfully.";
                 $conn->close();
-                header("Refresh:0"); // Refresh halaman setelah penghapusan
+                header("Refresh:0"); 
             } else {
                 echo "Please select at least one record to delete.";
             }
