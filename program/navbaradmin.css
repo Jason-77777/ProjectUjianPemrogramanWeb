@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-admin {
+    display: flex;
+    justify-content: center; /* Untuk meletakkan navbar di tengah secara horizontal */
+    background-color: #333; /* Warna latar belakang */
+    overflow: hidden;
+}
+
+.navbar-admin a {
+    display: block;
+    color: white; /* Warna teks */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-admin a:hover {
+    background-color: #ddd; /* Warna latar belakang saat dihover */
+    color: black; /* Warna teks saat dihover */
+}

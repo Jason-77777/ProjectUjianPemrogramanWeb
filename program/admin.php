@@ -33,7 +33,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
                     <label> Password </label>
                     <input type="password" name="password">
                 </div>
-                <div><input type="submit" value="login" class="login-button"></div>
+                <div><input type="submit" value="Login" class="login-button"></div>
             </form>
         </div>
     </div>
