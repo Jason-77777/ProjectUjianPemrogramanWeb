@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <form action="admin.php" method="post">
     <button type="submit" class="admin-button">Admin</button>
   </form>
-  <p style="color: blue;"><a href="mainpage.php">No account? Create account here!</a></p>
+  <p style="color: white;"><a href="mainpage.php">No account? Create account here!</a></p>
 </div>
 
 </body>
