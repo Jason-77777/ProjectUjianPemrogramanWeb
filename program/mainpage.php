@@ -19,6 +19,10 @@
   <form action="admin.php" method="post">
     <button type="submit" class="admin-button">Admin</button>
   </form>
+  <form action="login.php" method="post">
+    <button type="submit" class="login2-button">Login</button>
+  </form>
+
 </div>
 
 <?php
@@ -44,9 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
-
 
 </body>
 </html>
