@@ -9,7 +9,7 @@
 <body>
 
 <div class="login-box">
-  <h2>Welcome to Parpel!</h2>
+  <h2 style="color: white;">Welcome to Parpel!</h2>
   <form action="" method="post">
     <input type="text" name="username" placeholder="Username" required>
     <input type="text" name="email" placeholder="Email" required>

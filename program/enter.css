@@ -3,8 +3,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 0; 
 }
+
 
 .login-container {
     display: flex;
@@ -19,6 +20,7 @@ body {
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    background-image: url('pool.gif');
 }
 
 .login-box input {
@@ -31,8 +33,8 @@ body {
 .login-button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #a0dbd8;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
@@ -41,7 +43,7 @@ body {
 .admin-button {
     width: 100%;
     padding: 10px;
-    background-color: rgb(5, 52, 205);
+    background-color: rgb(141, 157, 211);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -51,7 +53,7 @@ body {
 .login2-button {
     width: 100%;
     padding: 10px;
-    background-color: rgb(182, 5, 205);
+    background-color: rgb(204, 153, 210);
     color: #fff;
     border: none;
     cursor: pointer;
