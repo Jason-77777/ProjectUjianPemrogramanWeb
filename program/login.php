@@ -47,6 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="password" name="password" placeholder="Password" required>
     <button type="submit" class="login2-button">Login</button>
   </form>
+  <form action="admin.php" method="post">
+    <button type="submit" class="admin-button">Admin</button>
+  </form>
+  <p style="color: blue;"><a href="mainpage.php">No account? Create account here!</a></p>
 </div>
 
 </body>
