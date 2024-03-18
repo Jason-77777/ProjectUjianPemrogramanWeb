@@ -8,16 +8,16 @@
 <body>
 
     <?php include 'navbar.html'; ?>
->
+
     <div class="image-catalog">
         <div class="image-box">
-            <a href="your_link_here">
+            <a href="itemdetails.php">
                 <img src="image1.jpg" width="200px">
                 <p>hai</p>
             </a>
         </div>
         <div class="image-box">
-            a href="your_link_here">
+            <a href="itemdetail.php">
                 <img src="image2.jpg" width="200px">
                 <p>hai</p>
             </a>
