@@ -7,7 +7,6 @@
 </head>
 <body>
 
-    <!-- Include the navbar -->
     <?php include 'navbar.html'; ?>
 
     <!-- Your page content goes here -->

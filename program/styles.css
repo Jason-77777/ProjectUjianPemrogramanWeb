@@ -52,7 +52,6 @@ body {
     color: rgb(0, 0, 0);
 }
 
-/* Style for the search box */
 .search-box {
     display: none;
     background-color: #333;
@@ -91,7 +90,6 @@ body {
     color: white;
 }
 
-/* Style for the image catalog */
 .image-catalog {
     display: flex;
     flex-wrap: wrap;
@@ -103,13 +101,13 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #4CAF50; /* Blue background */
+    background-color: #4CAF50; 
     text-align: center;
-    color: white; /* Text color */
+    color: white;
 }
 
 .image-box img {
-    width: 50px; /* Adjust the width as needed */
+    width: 50px; 
     height: 50px;
     margin-bottom: 10px;
 }

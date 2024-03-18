@@ -7,10 +7,8 @@
 </head>
 <body>
 
-    <!-- Include the navbar -->
     <?php include 'navbar.html'; ?>
-
-    <!-- Image catalog content -->
+>
     <div class="image-catalog">
         <div class="image-box">
             <a href="your_link_here">

@@ -42,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
         $conn->close();
         
-        // Redirect to index.php after successful registration
         header("Location: index.php");
         exit();
     }
