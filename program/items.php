@@ -12,14 +12,14 @@
     <div class="image-catalog">
         <div class="image-box">
             <a href="itemdetails.php">
-                <img src="image1.jpg" width="200px">
-                <p>hai</p>
+                <img src="assets/image1.jpg">
+                <figcaption>hai</figcaption>
             </a>
         </div>
         <div class="image-box">
             <a href="itemdetail.php">
-                <img src="image2.jpg" width="200px">
-                <p>hai</p>
+                <img src="assets/image2.jpg">
+                <figcaption>hai</figcaption>
             </a>
         </div>
     <!-- Add more image boxes as needed -->
