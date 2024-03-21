@@ -11,10 +11,12 @@
 
     <div class="image-catalog">
         <div class="image-box">
-            <a href="itemdetails.php">
-                <img src="assets/image1.jpg">
-                <figcaption>hai</figcaption>
-            </a>
+            <figure>
+                <a href="itemdetails.php">
+                    <img src="assets/image1.jpg">
+                    <figcaption>hai</figcaption>
+                </a>
+            </figure>
         </div>
         <div class="image-box">
             <a href="itemdetail.php">

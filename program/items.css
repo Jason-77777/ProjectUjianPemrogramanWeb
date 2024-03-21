@@ -111,6 +111,10 @@ body {
     margin-bottom: 10px;
 }
 
+figure {
+    margin: 0;
+}
+
 .containerdatauser {
     margin: 50px auto;
     width: 80%;
