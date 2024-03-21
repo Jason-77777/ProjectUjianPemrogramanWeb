@@ -111,8 +111,9 @@ body {
     margin-bottom: 10px;
 }
 
-figure {
-    margin: 0;
+figcaption {
+    text-decoration: none;
+    color: white;
 }
 
 .containerdatauser {
