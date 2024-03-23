@@ -11,18 +11,45 @@
 
     <div class="image-catalog">
         <div class="image-box">
-            <a href="itemdetails.php">
-                <img src="image1.jpg" width="200px">
-                <p>hai</p>
+            <a href="pensil.php">
+                <img src="assets/pensil.png">
+                <figcaption>Pensil <br>
+                    Harga: Rp. 2000,-/ pc
+                </figcaption>
             </a>
         </div>
         <div class="image-box">
-            <a href="itemdetail.php">
-                <img src="image2.jpg" width="200px">
-                <p>hai</p>
+            <a href="pen.php">
+                <img src="assets/pen.png">
+                <figcaption>Pen <br>
+                    Harga: Rp. 5000,-/ pc
+                </figcaption>
             </a>
         </div>
-    <!-- Add more image boxes as needed -->
+        <div class="image-box">
+            <a href="penggaris.php">
+                <img src="assets/penggaris.png">
+                <figcaption>Penggaris <br>
+                    Harga: Rp. 7000,-/ pc
+                </figcaption>
+            </a>
+        </div>
+        <div class="image-box">
+            <a href="notebook.php">
+                <img src="assets/buku.png">
+                <figcaption>Notebook <br>
+                    Harga: Rp. 15000,-/ pc
+                </figcaption>
+            </a>
+        </div>
+        <div class="image-box">
+            <a href="penghapus.php">
+                <img src="assets/penghapus.png">
+                <figcaption>Penghapus <br>
+                    Harga: Rp. 3000,-/ pc
+                </figcaption>
+            </a>
+        </div>
     </div>
 
 
