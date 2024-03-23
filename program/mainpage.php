@@ -22,7 +22,6 @@
   <form action="login.php" method="post">
     <button type="submit" class="login2-button">Login</button>
   </form>
-
 </div>
 
 <?php
@@ -31,15 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
     $conn = new mysqli('localhost', 'root', '', 'parpel');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
     }
     else{
         $stmt = $conn->prepare("INSERT INTO users(username, email, password) VALUES(?, ?, ?)");
-        $stmt->bind_param("sss", $username, $email, $hashed_password); 
+        $stmt->bind_param("sss", $username, $email, $password); 
         $stmt->execute();
         $stmt->close();
         $conn->close();
