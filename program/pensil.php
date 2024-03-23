@@ -44,7 +44,7 @@
         if($conn->connect_error){
             die('Connection Failed : '.$conn->connect_error);
         } else {
-            $stmt = $conn->prepare("INSERT INTO cart_items (item_name, item_price, quantity, total_price) VALUES (?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO keranjang(itemName, itemPrice, quantity, totalPrice) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("siii", $itemName, $itemPrice, $quantity, $totalPrice);
             $stmt->execute();
             $stmt->close();
@@ -83,8 +83,6 @@
             var total = quantity * itemPrice;
             var cartItem = itemName + ': Rp. ' + itemPrice + ' x ' + quantity + ' = Rp. ' + total;
             alert('Item added to cart:\n' + cartItem);
-            // Anda bisa menambahkan logika lebih lanjut di sini untuk menambahkan item ke keranjang di inventory.php
-            // Atau Anda dapat menyesuaikan dengan kebutuhan aplikasi Anda.
         }
     </script>
 
