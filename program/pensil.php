@@ -15,11 +15,10 @@
             <img src="assets/pensil.png">
             <figcaption>Pensil <br>
                 Harga: Rp. 2000,-/ pc <br>
-                <input type="number" id="quantity" value="1" min="1">
-                <button onclick="decrementQuantity('quantity')">-</button>
-                <button onclick="incrementQuantity('quantity')">+</button>
-                <!-- <div>Total: Rp. <span id="total">2000</span></div> -->
-                <button onclick="addToCart('Pensil', 2000, 'quantity')">Add to Inventory</button>
+                <form method="post">
+                    <input type="number" name="quantity" id="quantity" value="1" min="1">
+                    <button type="submit" name="add_to_cart">Add to Inventory</button>
+                </form>
             </figcaption>
         </div>
         <!-- Add other items similarly -->
@@ -27,17 +26,12 @@
 
     <?php
     session_start();
-    ini_set('display_errors', 1);   
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
 
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_cart'])) {
         $itemName = "Pensil"; 
-        $itemPrice = 2000; 
+        $itemPrice = 2000.00; 
         $quantity = $_POST['quantity'];
 
-        
         $totalPrice = $itemPrice * $quantity;
 
         $conn = new mysqli('localhost', 'root', '', 'parpel');
@@ -45,47 +39,19 @@
             die('Connection Failed : '.$conn->connect_error);
         } else {
             $stmt = $conn->prepare("INSERT INTO keranjang(itemName, itemPrice, quantity, totalPrice) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("siii", $itemName, $itemPrice, $quantity, $totalPrice);
+            $stmt->bind_param("sddd", $itemName, $itemPrice, $quantity, $totalPrice);
             $stmt->execute();
             $stmt->close();
             $conn->close();
             
-            header("Location: inventory.php");
+            // Menampilkan pesan notifikasi menggunakan JavaScript
             echo "<script>alert('Item added to cart successfully.');</script>";
+            // Mengalihkan pengguna ke halaman inventaris setelah notifikasi ditampilkan
+            header("Location: inventory.php");
+            exit; // Memastikan bahwa tidak ada kode HTML lain yang dijalankan setelah mengalihkan pengguna
         }
     }
     ?>
-
-    <script>
-        function incrementQuantity(inputId) {
-            var input = document.getElementById(inputId);
-            input.value = parseInt(input.value) + 1;
-            calculateTotal(inputId);
-        }
-
-        function decrementQuantity(inputId) {
-            var input = document.getElementById(inputId);
-            if (parseInt(input.value) > 1) {
-                input.value = parseInt(input.value) - 1;
-                calculateTotal(inputId);
-            }
-        }
-
-        function calculateTotal(inputId) {
-            var input = document.getElementById(inputId);
-            var total = parseInt(input.value) * parseInt(input.getAttribute('data-price'));
-            document.getElementById('total' + inputId.slice(-1)).textContent = total;
-        }
-
-        function addToCart(itemName, itemPrice, inputId) {
-            var input = document.getElementById(inputId);
-            var quantity = parseInt(input.value);
-            var total = quantity * itemPrice;
-            var cartItem = itemName + ': Rp. ' + itemPrice + ' x ' + quantity + ' = Rp. ' + total;
-            alert('Item added to cart:\n' + cartItem);
-        }
-    </script>
-
 
 </body>
 </html>
