@@ -44,11 +44,9 @@
             $stmt->close();
             $conn->close();
             
-            // Menampilkan pesan notifikasi menggunakan JavaScript
             echo "<script>alert('Item added to cart successfully.');</script>";
-            // Mengalihkan pengguna ke halaman inventaris setelah notifikasi ditampilkan
             header("Location: inventory.php");
-            exit; // Memastikan bahwa tidak ada kode HTML lain yang dijalankan setelah mengalihkan pengguna
+            exit; 
         }
     }
     ?>
