@@ -26,7 +26,7 @@
                 echo '<img src="assets/' . $row["itemName"] . '.png">';
                 echo '<figcaption>' . $row["itemName"] . '<br>';
                 echo 'Harga: Rp. ' . $row["itemPrice"] . ',-/ pc <br>';
-                echo 'Jumlah: ' . $row["quantity"] . '<br>'; // Display the quantity as static text
+                echo 'Jumlah: ' . $row["quantity"] . '<br>'; 
                 echo 'Total Harga: Rp. ' . ($row["itemPrice"] * $row["quantity"]) . ',-<br>';
                 echo '<form method="post">';
                 echo '<input type="hidden" name="item_id" value="' . $row["id"] . '">';
@@ -58,7 +58,6 @@
         $sql = "DELETE FROM keranjang WHERE id='$itemId'";
         if ($conn->query($sql) === TRUE) {
             echo "<script>alert('Item deleted successfully.');</script>";
-            // Use JavaScript for redirection to avoid the "headers already sent" issue
             echo "<script>window.location.href = 'inventory.php';</script>";
             exit;
         } else {
