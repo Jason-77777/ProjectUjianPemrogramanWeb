@@ -32,7 +32,7 @@
                 echo '<input type="hidden" name="item_id" value="' . $row["id"] . '">';
                 echo '<input type="number" name="quantity" value="' . $row["quantity"] . '" min="1">';
                 echo '<button type="submit" name="update_quantity">Update Quantity</button>';
-                echo '<input type="checkbox" name="pay" value="1"> Paid<br>';
+                // echo '<input type="checkbox" name="pay" value="1"> Paid<br>';
                 echo '</form>';
                 echo '<form method="post">';
                 echo '<input type="hidden" name="item_id" value="' . $row["id"] . '">';
