@@ -147,3 +147,31 @@ tr:hover {
     background-color: #ddd;
 }
 
+.payment-options {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.payment-method {
+    margin: 20px;
+    text-align: center;
+}
+
+.payment-method img {
+    width: 150px;
+    height: auto;
+}
+
+.payment-method p {
+    margin-top: 10px;
+}
+
+.payment-container {
+    display: flex;
+}

@@ -5,25 +5,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Database connection
     $conn = new mysqli('localhost', 'root', '', 'parpel');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
     } else {
-        // Check if the username and password match
+
         $stmt = $conn->prepare("SELECT id, username FROM users WHERE username = ? AND password = ?");
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
         
         if ($result->num_rows == 1) {
-            // Login successful
             $_SESSION['username'] = $username;
-            header("Location: home.php"); // Redirect to the dashboard page
+            header("Location: home.php"); 
             exit();
         } else {
-            // Login failed
-            header("Location: index.php"); // Redirect back to the login page
+            header("Location: index.php"); 
             exit();
         }
     }
