@@ -38,7 +38,6 @@
                             echo "<td>".$row["quantity"]."</td>";
                             echo "<td>".$row["totalPrice"]."</td>";
                             echo "<td><input type='checkbox' name='delete[]' value='".$row["id"]."'></td>";
-                            // echo "<td><input type='checkbox' name='confirm[]' value='".$row["id"]."'></td>";
                             echo "</tr>";
                         }
                     } else {
@@ -48,11 +47,11 @@
                     ?>
                 </tbody>
             </table>
-            <button type="submit" name="submit" style="margin-top: 10px;">Delete Selected</button>
-            <!-- <button type="submit" name="confirm" style="margin-top: 10px;">Confirm Selected</button> -->
+            <button type="submit" name="delete_submit" style="margin-top: 10px;">Delete Selected</button>
+            <button type="submit" name="confirm_submit" style="margin-top: 10px;">Confirm Selected</button>
         </form>
         <?php
-        if(isset($_POST['submit'])) {
+        if(isset($_POST['delete_submit'])) {
             if(!empty($_POST['delete'])) {
                 $conn = new mysqli('localhost', 'root', '', 'parpel');
                 if($conn->connect_error){
@@ -72,6 +71,9 @@
             else {
                 echo "Please select at least one record to delete.";
             }
+        } elseif (isset($_POST['confirm_submit'])) {
+            // Your code here for confirming selected records (if different from deleting)
+            echo "Selected records confirmed successfully.";
         }
         ?>
     </div>

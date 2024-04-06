@@ -34,7 +34,7 @@
                 echo '</form>';
                 echo '<form method="post">';
                 echo '<input type="hidden" name="item_id" value="' . $row["id"] . '">';
-                echo '<button type="submit" name="delete_item">Delete</button>';
+                echo '<a href="payment2.php"><button type="button">Proceed</button></a>';
                 echo '</form>';
                 echo '</figcaption>';
                 echo '</div>';
@@ -46,7 +46,7 @@
         ?>
     </div>
 
-    <?php
+    <!-- <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_item'])) {
         $itemId = $_POST['item_id'];
 
@@ -66,7 +66,7 @@
 
         $conn->close();
     }
-    ?>
+    ?> -->
 
 </body>
 </html>
