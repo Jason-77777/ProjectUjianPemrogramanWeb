@@ -72,7 +72,6 @@
                 echo "Please select at least one record to delete.";
             }
         } elseif (isset($_POST['confirm_submit'])) {
-            // Your code here for confirming selected records (if different from deleting)
             echo "Selected records confirmed successfully.";
         }
         ?>
