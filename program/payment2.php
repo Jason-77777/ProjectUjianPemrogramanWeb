@@ -22,8 +22,8 @@
                     <p>OVO</p>
                 </div>
                 <div class="payment-method">
-                    <img src="bca.png">
-                    <p>BCA>
+                    <a href="bca.php"><img src="bca.png">
+                    <p>BCA<p>
                 </div>
             </div>
         </div>
