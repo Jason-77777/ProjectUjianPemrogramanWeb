@@ -20,32 +20,25 @@ if (!isset($_FILES['pdfFile'])) {
 </html>
 <?php
 } else {
-    // Database connection
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "parpel";
 
-    // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Check if the form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Check if a file is uploaded
         if (isset($_FILES["pdfFile"]) && $_FILES["pdfFile"]["error"] == UPLOAD_ERR_OK) {
             $target_dir = "uploads/";
             $target_file = $target_dir . basename($_FILES["pdfFile"]["name"]);
-            
-            // Move the uploaded file to the specified directory
+
             if (move_uploaded_file($_FILES["pdfFile"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["pdfFile"]["name"]). " has been uploaded.";
 
-                // Insert record into the database
                 $file_name = $_FILES["pdfFile"]["name"];
                 $file_path = $target_file;
                 $sql = "INSERT INTO uploaded_files (file_name, file_path) VALUES ('$file_name', '$file_path')";
@@ -63,7 +56,6 @@ if (!isset($_FILES['pdfFile'])) {
         }
     }
 
-    // Close connection
     $conn->close();
 }
     ?>
