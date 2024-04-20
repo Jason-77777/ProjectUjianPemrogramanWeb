@@ -51,7 +51,7 @@ if (!isset($_FILES['pdfFile'])) {
                 $sql = "INSERT INTO uploaded_files (file_name, file_path) VALUES ('$file_name', '$file_path')";
                 if ($conn->query($sql) === TRUE) {
                     echo "Record inserted successfully";
-                    header ("home.php");
+                    header("Location: home.php");
                 } else {
                     echo "Error inserting record: " . $conn->error;
                 }
