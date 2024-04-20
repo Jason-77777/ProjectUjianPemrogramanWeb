@@ -1,3 +1,6 @@
+<?php
+if (!isset($_FILES['pdfFile'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +10,16 @@
 </head>
 <body>
     <?php include 'navbar.html'; ?>
-    <form action="bca2.php" method="post" enctype="multipart/form-data">
+    <form action="bca.php" method="post" enctype="multipart/form-data">
         <p>Insert 0222889918 to your BCA Account for transfer</p>  
         <label for="pdfFile">Transfer Proof</label><br>
         <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required><br><br>
         <button type="submit">Submit</button>
     </form>
-    
-    <?php
+    </body>
+</html>
+<?php
+} else {
     // Database connection
     $servername = "localhost";
     $username = "root";
@@ -46,6 +51,7 @@
                 $sql = "INSERT INTO uploaded_files (file_name, file_path) VALUES ('$file_name', '$file_path')";
                 if ($conn->query($sql) === TRUE) {
                     echo "Record inserted successfully";
+                    header ("home.php");
                 } else {
                     echo "Error inserting record: " . $conn->error;
                 }
@@ -59,6 +65,6 @@
 
     // Close connection
     $conn->close();
+}
     ?>
-</body>
-</html>
+
