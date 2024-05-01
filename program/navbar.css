@@ -13,7 +13,8 @@ ul {
 }
 
 li {
-    list-style-type: none;
+    margin-left: 5pt;
+    margin-right: 5pt;
 }
 
 .navbar a {

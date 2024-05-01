@@ -32,14 +32,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello!</title>
-  <link rel="stylesheet" href="enter.css">
+  <title>Parpel | Login</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
 <div class="login-box">
+  <h1>Parpel</h1>
+  <p>Stationary Shopping Website</p>
   <h2>Welcome to Parpel!</h2>
-  <form action="" method="post">
+  <form action="items.php" method="post">
     <input type="text" name="username" placeholder="Username" required>
     <input type="password" name="password" placeholder="Password" required>
     <button type="submit" class="login2-button">Login</button>
@@ -47,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <form action="admin.php" method="post">
     <button type="submit" class="admin-button">Admin</button>
   </form>
-  <p style="color: white;"><a href="mainpage.php">No account? Create account here!</a></p>
+  <p>No Account? <a href="mainpage.php">Create account here!</a></p>
 </div>
 
 </body>

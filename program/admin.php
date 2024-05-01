@@ -16,18 +16,20 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="enter.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="login-container">
         <div class="login-box">
             <form method="post" action="">
                 <div>
-                    <label style="color: white;"> Admin </label>
+                    <h1>Parpel</h1>
+                    <p>Stationary Shopping Website</p>
+                    <h2>Hello Boss!</h2>
                     <input type="text" name="username" placeholder="Username">
                 </div>
                 <div>
-                    <input type="password" name="password" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
                 </div>
                 <div><input type="submit" value="Login" class="login-button"></div>
             </form>

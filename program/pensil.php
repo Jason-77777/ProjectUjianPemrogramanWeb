@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello!</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Parpel | Pensil</title>
+    <link rel="stylesheet" href="card.css">
 </head>
 <body>
 
     <?php include 'navbar.html'; ?>
 
-    <div class="image-catalog">
-        <div class="image-box">
-            <img src="assets/pensil.png">
-            <figcaption>Pensil <br>
-                Harga: Rp. 2000,-/ pc <br>
+    <div class="card-parent">
+        <div class="card" style="width: 15rem;">
+            <img src="assets/pensil.png" class="card-img-top" alt="Pensil">
+            <div class="card-body">
+                <h5 class="card-title">Pensil</h5>
+                <p class="card-text">Harga: Rp 2.000,-/ pc</p>
                 <form method="post">
                     <input type="number" name="quantity" id="quantity" value="1" min="1">
-                    <button type="submit" name="add_to_cart">Add to Inventory</button>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Inventory</button>
                 </form>
-            </figcaption>
+            </div>
         </div>
     </div>
 
