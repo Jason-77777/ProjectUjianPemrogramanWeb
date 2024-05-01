@@ -49,7 +49,7 @@ body {
 
 .float-right {
     float: right;
-    color: rgb(0, 0, 0);
+    color: rgb(187, 14, 14);
 }
 
 .search-box {
@@ -175,3 +175,4 @@ tr:hover {
 .payment-container {
     display: flex;
 }
+
