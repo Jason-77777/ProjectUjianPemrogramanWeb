@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-    background-color: #ffffff;
+    background-color: greenyellow;
     overflow: hidden;
 }
 
@@ -47,7 +47,7 @@ li {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #03d50d;
     color: white;
     border-radius: 0 4px 4px 0;
 }
