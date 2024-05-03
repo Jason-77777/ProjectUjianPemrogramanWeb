@@ -21,7 +21,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
 <body>
     <div class="login-container">
         <div class="login-box">
-            <form method="post" action="">
+            <form method="post" action="stock.php">
                 <div>
                     <h1>Parpel</h1>
                     <p>Stationary Shopping Website</p>

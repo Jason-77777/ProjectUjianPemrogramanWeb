@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gopay</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
     <?php include 'navbar.html'; ?>
 
-    <form action="" method="post">
-        <label for="namaGopay">Gopay Username:</label><br>
-        <input type="text" id="namaGopay" name="namaGopay" required><br>
+    <div class="gopay">
+        <form action="" method="post">
+            <label for="namaGopay">Gopay Username:</label><br>
+            <input type="text" id="namaGopay" name="namaGopay" required><br>
 
-        <label for="nomorGopay">Gopay Number:</label><br>
-        <input type="text" id="nomorGopay" name="nomorGopay" required><br>
+            <label for="nomorGopay">Gopay Number:</label><br>
+            <input type="text" id="nomorGopay" name="nomorGopay" required><br>
             
-        <button type="submit">Pay Now</button>
-    </form>
+            <button type="submit" class="btn btn-primary">Pay Now</button>
+        </form>
+    </div>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

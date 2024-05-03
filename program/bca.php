@@ -6,16 +6,19 @@ if (!isset($_FILES['pdfFile'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
     <title>BCA</title>
 </head>
 <body>
     <?php include 'navbar.html'; ?>
+    <div class="bca">
     <form action="bca.php" method="post" enctype="multipart/form-data">
         <p>Insert 0222889918 to your BCA Account for transfer</p>  
         <label for="pdfFile">Transfer Proof</label><br>
-        <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required><br><br>
-        <button type="submit">Submit</button>
+        <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" class="btn btn-primary" required><br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    </div>
     </body>
 </html>
 <?php

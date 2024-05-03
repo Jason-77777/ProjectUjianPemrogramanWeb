@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OVO</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
     <?php include 'navbar.html'; ?>
 
-    <form action="" method="post">
-        <label for="ovoName">OVO Username:</label><br>
-        <input type="text" id="ovoName" name="ovoName" required><br>
+    <div class="ovo">
+        <form action="" method="post">
+            <label for="ovoName">OVO Username:</label><br>
+            <input type="text" id="ovoName" name="ovoName" required><br>
 
-        <label for="ovoNumber">OVO Number:</label><br>
-        <input type="text" id="ovoNumber" name="ovoNumber" required><br>
+            <label for="ovoNumber">OVO Number:</label><br>
+            <input type="text" id="ovoNumber" name="ovoNumber" required><br>
             
-        <button type="submit">Pay Now</button>
+            <button type="submit" class="btn btn-primary">Pay Now</button>
     </form>
+    </div>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

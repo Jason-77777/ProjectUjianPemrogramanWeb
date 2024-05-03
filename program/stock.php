@@ -8,10 +8,11 @@
 </head>
 <body>
     <?php include 'navbaradmin.html'; ?>
-    
+
     <div class="containerdatauser">
-        <h2>Stock Data</h2>
+        
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <h2>Stock Data</h2>
             <table>
                 <thead>
                     <tr>
