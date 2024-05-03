@@ -23,12 +23,7 @@ if (!isset($_FILES['pdfFile'])) {
 </html>
 <?php
 } else {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "parpel";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli('localhost', 'root', 'root', 'parpel');
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
