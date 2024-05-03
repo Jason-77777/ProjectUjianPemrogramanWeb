@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="card.css">
 </head>
 <body>
 
@@ -22,10 +22,12 @@
 
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo '<div class="image-box">';
+                echo '<div class="card-parent">';
+                echo '<div class="card" style="width: 15rem;">';
                 echo '<img src="assets/' . $row["itemName"] . '.png">';
-                echo '<figcaption>' . $row["itemName"] . '<br>';
-                echo 'Harga: Rp. ' . $row["itemPrice"] . ',-/ pc <br>';
+                echo '<div class="card-body">';
+                echo '<h5>' . $row["itemName"] . '</h5>' . '<br>';
+                echo '<p> Harga: Rp. ' . $row["itemPrice"] . ',-/ pc <br>';
                 echo 'Jumlah: ' . $row["quantity"] . '<br>'; 
                 echo 'Total Harga: Rp. ' . ($row["itemPrice"] * $row["quantity"]) . ',-<br>';
                 echo '<form method="post">';
@@ -34,9 +36,12 @@
                 echo '</form>';
                 echo '<form method="post">';
                 echo '<input type="hidden" name="item_id" value="' . $row["id"] . '">';
-                echo '<a href="payment2.php"><button type="button">Proceed</button></a>';
+                echo '<a href="payment2.php"><button type="button" class="btn btn-primary">Proceed</button></a>';
                 echo '</form>';
-                echo '</figcaption>';
+                echo '</p>';
+                echo '</h5>';
+                echo '</div>';
+                echo '</div>';
                 echo '</div>';
             }
         } else {

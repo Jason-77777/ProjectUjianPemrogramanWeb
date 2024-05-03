@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parpel Database</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stock.css">
 </head>
 <body>
     <?php include 'navbaradmin.html'; ?>
+    
     <div class="containerdatauser">
         <h2>Stock Data</h2>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
