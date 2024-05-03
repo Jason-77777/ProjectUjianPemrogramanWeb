@@ -22,7 +22,7 @@
         </thead>
         <tbody>
                     <?php
-                    $conn = new mysqli('localhost', 'root', 'root', 'parpel');
+                    $conn = new mysqli('localhost', 'root', '', 'parpel');
                     if($conn->connect_error){
                         die('Connection Failed : '.$conn->connect_error);
                     }

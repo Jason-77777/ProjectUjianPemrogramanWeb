@@ -25,7 +25,7 @@ if (!isset($_FILES['pdfFile'])) {
 } else {
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "parpel";
 
     $conn = new mysqli($servername, $username, $password, $dbname);

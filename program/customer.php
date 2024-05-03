@@ -22,7 +22,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    $conn = new mysqli('localhost', 'root', 'root', 'parpel');
+                    $conn = new mysqli('localhost', 'root', '', 'parpel');
                     if($conn->connect_error){
                         die('Connection Failed : '.$conn->connect_error);
                     }
@@ -49,7 +49,7 @@
         <?php
         if(isset($_POST['submit'])) {
             if(!empty($_POST['delete'])) {
-                $conn = new mysqli('localhost', 'root', 'root', 'parpel');
+                $conn = new mysqli('localhost', 'root', '', 'parpel');
                 if($conn->connect_error){
                     die('Connection Failed : '.$conn->connect_error);
                 }
