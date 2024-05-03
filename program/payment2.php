@@ -14,7 +14,7 @@
             <h2>Select Payment Method</h2>
             <div class="payment-methods">
                 <div class="payment-method">
-                    <img src="gopay.png">
+                    <img src="gopay.png"><a href="gopay.php">
                     <p>GoPay</p>
                 </div>
                 <div class="payment-method">
