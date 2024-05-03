@@ -13,7 +13,7 @@
 
     <div class="image-catalog">
         <?php
-        $conn = new mysqli('localhost', 'root', '', 'parpel');
+        $conn = new mysqli('localhost', 'root', 'root', 'parpel');
         if($conn->connect_error){
             die('Connection Failed : '.$conn->connect_error);
         }
@@ -58,7 +58,7 @@
         $quantity = $_POST['quantity'];
         $itemId = $_POST['item_id'];
 
-        $conn = new mysqli('localhost', 'root', '', 'parpel');
+        $conn = new mysqli('localhost', 'root', 'root', 'parpel');
         if($conn->connect_error){
             die('Connection Failed : '.$conn->connect_error);
         }
@@ -78,7 +78,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_item'])) {
         $itemId = $_POST['item_id'];
 
-        $conn = new mysqli('localhost', 'root', '', 'parpel');
+        $conn = new mysqli('localhost', 'root', 'root', 'parpel');
         if($conn->connect_error){
             die('Connection Failed : '.$conn->connect_error);
         }

@@ -30,11 +30,14 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_cart'])) {
         $itemName = "Pensil"; 
         $itemPrice = 2000.00; 
+        echo '';
         $quantity = $_POST['quantity'];
+
+        echo $quantity;
 
         $totalPrice = $itemPrice * $quantity;
 
-        $conn = new mysqli('localhost', 'root', '', 'parpel');
+        $conn = new mysqli('localhost', 'root', 'root', 'parpel');
         if($conn->connect_error){
             die('Connection Failed : '.$conn->connect_error);
         } else {
